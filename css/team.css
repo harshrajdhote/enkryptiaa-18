@@ -1,0 +1,328 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+
+#side {
+  height:79px;
+  z-index: 999;
+  top:10px !important;
+  left: 10px;
+  position:fixed;
+  background:rgba(0,0,0,0);
+}
+body{
+  font-family: "Segoe UI";
+}
+
+canvas {
+display:block;
+position: fixed;
+z-index: -10;
+}
+#particles-js {
+    background-color: #010d2d;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -10;
+    top: 0;
+    left: 0
+}
+
+#top-menu-container {
+  width:100%;
+  z-index:1;
+  right:0;
+  height:55px;
+  z-index: 999;
+  top:0 !important;
+  position:fixed;
+  background:rgba(0,0,0,0.4);
+}
+
+h1{
+  color: white;
+  top:0;
+  margin-top:0;
+}
+
+figure.snip4, figure.snip2, figure.snip1,figure.team1 {
+  z-index: 1;
+  color: #fff;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin-top:0;
+  text-align: center;
+}
+figure.snip4 h3, figure.snip2 h3, figure.snip1 h3 ,figure.team1 h3{
+  color: white;
+  font-size: 150%;
+}
+figure.snip4 *, figure.snip2 *, figure.snip1 * ,figure.team1 *{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.snip4 img, figure.snip2 img, figure.snip1 img , figure.team1 img {
+  border-radius: 1%;
+  opacity: 1;
+  width: 100%;
+  -webkit-transition: opacity 0.35s;
+  transition: opacity 0.35s;
+}
+figure.snip4 figcaption, figure.snip2 figcaption, figure.snip1 figcaption ,figure.team1 figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+figure.snip4 figcaption > div, figure.snip2 figcaption > div, figure.snip1 figcaption > div , figure.team1 figcaption > div {
+  height: 50%;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+figure.snip4 figcaption::before, figure.snip2 figcaption::before, figure.snip1 figcaption::before, figure.team1 figcaption::before {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  left: 50%;
+  height: 2px;
+  content: '';
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+  -webkit-transition-delay: 0.6s;
+  transition-delay: 0.6s;
+}
+figure.snip4 h2,
+figure.snip4 p,
+figure.snip2 h2,
+figure.snip2 p,
+figure.snip1 h2,
+figure.snip1 p ,
+figure.team1 p,
+figure.team1 h2 {
+  font-size: 140%;
+  margin: 0;
+  padding: 20% 0%;
+  opacity: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  -webkit-transition: opacity 0.4s, -webkit-transform 0.4s;
+  transition: opacity 0.4s,-webkit-transform 0.4s,-moz-transform 0.4s,-o-transform 0.4s,transform 0.4s;
+}
+figure.snip4 h2, figure.snip2 h2, figure.snip1 h2,figure.team1 h2 {
+  display: inline-block;
+  word-spacing: -0.1em;
+  font-weight: 300;
+  text-transform: uppercase;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transform: translate3d(0%, 50%, 0);
+  transform: translate3d(0%, 50%, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip4 h2 span, figure.snip2 h2 span, figure.snip1 h2 span , figure.team1 h2 span {
+  font-weight: 800;
+}
+figure.snip4 p, figure.snip2 p, figure.snip1 p,figure.team1 p {
+  font-weight: 300;
+  top: 0%;
+  color: #000;
+  background: #fff;
+  -webkit-transform: translate3d(0%, -50%, 0);
+  transform: translate3d(0%, -50%, 0);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+figure.snip4 a, figure.snip2 a, figure.snip1 a{
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  color: #ffffff;
+}
+figure.snip4:hover img, figure.snip2:hover img , figure.snip1:hover img  {
+  opacity: 0.7;
+}
+figure.snip4:hover figcaption h2,
+figure.snip4:hover figcaption p,
+figure.snip2:hover figcaption h2,
+figure.snip2:hover figcaption p,
+figure.snip1:hover figcaption h2,
+figure.snip1:hover figcaption p {
+  -webkit-transform: translate3d(0%, 0%, 0);
+  transform: translate3d(0%, 0%, 0);
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+figure.snip4:hover figcaption h2, figure.snip2:hover figcaption h2, figure.snip1:hover figcaption h2{
+  opacity: 1;
+}
+figure.snip4:hover figcaption p, figure.snip2:hover figcaption p, figure.snip1:hover figcaption p {
+  opacity: 1;
+}
+figure.snip4:hover figcaption::before, figure.snip2:hover figcaption::before, figure.snip1:hover figcaption::before {
+  background: #ffffff;
+  left: 0px;
+  right: 0px;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+}
+/*Added By pratiksha on 15/12/2017 4:38 PM */
+body {
+    font-family: Helvetica, Arial;
+    background-color: #010d2d;
+    background-repeat:no-repeat;
+    width:100%;
+    overflow-x:hidden;
+}
+
+#top-menu {
+    position: fixed;
+    z-index: 9999999;
+    background: rgba(255,255,255,0);
+    float:right;
+    right: 0;
+    top:40px;
+    display:none;
+    width:15%;
+    height:100%;
+    vertical-align:center;
+}
+
+#top-menu li {
+    display:block;
+    float: left;
+    padding:0px;
+    width:100%;
+}
+
+#top-menu a {
+    display: block;
+    padding: 5px 25px 7px 25px;
+    width: auto;
+    text-align: center;
+    -webkit-transition: .5s all ease-out;
+    -moz-transition: .5s all ease-out;
+    transition: .5s all ease-out;
+    border-left: 3px solid rgba(0,0,0,0);
+    color: #aaa;
+    text-decoration: none;
+}
+
+#top-menu a:hover {
+    color: #ccc;
+}
+
+#top-menu li.active a {
+    /*border-left: 3px solid #0ff;*/
+    background:rgba(0,0,0,0.5);
+    color: white;
+}
+div.entire-page a {
+	width:100%;
+	display:block;
+	height:auto;
+}
+
+@media only screen and (min-width : 0px) and (max-width : 425px)
+    {
+      figure.snip4
+      {
+        width: 50%;
+        margin: 2% 25% 5% 25%;
+      }
+      figure.snip2
+      {
+        width: 50%;
+        margin: 2% 25% 5% 25%;
+      }
+      figure.snip1
+      {
+        width: 50%;
+        margin: 2% 25% 5% 25%;
+      }
+      figure.team1
+      {
+          width:80%;
+          margin: 5%;
+      }
+        figure.team1 h2,
+        figure.team1 p,
+      figure.snip4 h2,
+figure.snip4 p,
+figure.snip2 h2,
+figure.snip2 p,
+figure.snip1 h2,
+figure.snip1 p {
+  font-size: 100%;
+}
+    }
+    @media only screen and (min-width : 426px) and (max-width : 768px)
+    {
+      figure.snip4
+      {
+        width: 44%;
+
+        margin:2% 2.5% 8% 2.5%;
+      }
+      figure.snip2
+      {
+        width: 44%;
+        margin:2% 2.5% 8% 2.5%;
+      }
+      figure.snip1
+      {
+        width: 44%;
+        margin:2% 28% 8% 28%;
+      }
+    }
+    @media only screen and (min-width : 769px) and (max-width : 1024px)
+    {
+      figure.snip4
+      {
+        width: 30%;
+        margin: 1.5% 10% 3% 10%;
+      }
+      figure.snip2
+      {
+        width: 30%;
+        margin: 1.5% 10% 3% 10%;
+      }
+      figure.snip1
+      {
+        width: 30%;
+        margin: 1.5% 35% 3% 35%
+        ;
+      }
+    }
+
+    @media only screen and (min-width : 1025px)
+    {
+      figure.snip4
+      {
+        width: 23%;
+        margin: 1% 1% 3% 1%;
+      }
+      figure.snip2
+      {
+        width: 25%;
+        margin: 3% 12% 3% 12%;
+      }
+      figure.snip1
+      {
+        width: 25%;
+        margin: 1% 35% 3% 37%;
+      }
+      #top-menu {
+	      display:block !important;
+      }
+
+    }

@@ -1,0 +1,171 @@
+.social_bar{
+	margin:10px;
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	top: auto;
+	left: auto;
+	overflow:hidden;
+	z-index: 20;
+}
+
+@media (max-width: 960px) {
+  #to-nav-dot-1{
+    margin-left: 10px;
+  }
+}
+
+.social_list {
+    /*float:right;*/
+    list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+    /*margin-top:40%;*/
+}
+.social_list .social-icon a {
+    display: inline-block;
+    //padding-bottom: 20%;
+    //padding-right:20%;
+	margin-top:8px;
+
+}
+.icons {
+	width: 40px;
+	height: 40px;
+    border-radius: 50%;
+    -moz-transition: -moz-transform .5s ease-in-out;
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+    transition:         transform height .5s ease-in-out;
+}
+.icons:hover {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+		height: calc(width * 2);
+    /*opacity: 0.5;*/
+}
+/* Navigation Bar */
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,800);
+nav.navbar .navbar-right {
+  font-family: 'Raleway', Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+nav.navbar .navbar-right * {
+  /*box-sizing: border-box;*/
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+nav.navbar .navbar-right li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0 1.5em;
+  overflow: hidden;
+}
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai|Oswald|Raleway:600');
+@font-face {
+    font-family: keep_calm_med;
+    src: url(../fonts/KeepCalm-Medium.ttf);
+}
+@font-face {
+    font-family: govt_agent;
+    src: url(../fonts/government-agent-bb.regular.ttf);
+}
+
+nav.navbar .navbar-right a {
+  padding: 0.3em 0;
+  /*color: #e67e22;*/
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin: 0;
+  text-decoration: none;
+  font-weight: 800;
+font-family: keep_calm_med;
+}
+nav.navbar .navbar-right a:before,
+nav.navbar .navbar-right a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+nav.navbar .navbar-right a:before {
+  bottom: 100%;
+  display: block;
+  height: 3px;
+  width: 100%;
+  content: "";
+  background-color: #e67e22;
+}
+nav.navbar .navbar-right a:after {
+  padding: 0.3em 0;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  content: attr(data-hover);
+  color: white;
+  white-space: nowrap;
+}
+nav.navbar .navbar-right li:hover a,
+nav.navbar .navbar-right .current a {
+  transform: translateY(100%);
+}
+nav.navbar{
+    padding-top:10px;
+    font-size: 18px;
+	/* upper bar */
+	/*opacity:.70;*/
+}
+
+#sb_button{
+	margin: 0;
+}
+
+ .navbar-inverse{
+	 background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0,rgba(0, 0, 0, 0) 100%);;
+	 background-color: rgba(0, 0, 0, 0.7);
+	 border: 0px;
+ }
+nav.navbar .current {
+    padding-top: 5px;
+    /*color: #e67e22;*/
+	color: #ffffff;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-weight: 800;
+    font-size: 25px;
+    letter-spacing: 1px;
+
+	font-family: govt_agent;
+}
+
+.navbar_logo {
+		height: 32px;
+}
+
+@media (min-width:960px) {
+	.navbar_logo{
+		width: 0;
+		-moz-transition: -moz-transform .5s ease-in-out;
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+		-o-transition: -webkit-transform .5s ease-in-out;
+    transition: width .25s ease-in-out;
+	}
+
+	#to-nav-dot-1:hover + .navbar_logo {
+	    width: 32px;
+	}
+}
+
+@media (max-width:960px) {
+	.social-icon{
+		display: inline-block;
+		margin-left: 8px;
+	}
+
+	.icons{
+		height: 40px;
+		width: 40px;
+	}
+}

@@ -1,0 +1,677 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <!--<link rel="stylesheet" href="css/overlay.css" type="text/css">-->
+       <link rel="stylesheet" href="css/cube.css" type="text/css">
+      <!-- <link rel="stylesheet" href="preload.css" type="text/css">-->
+      <!-- <link rel="stylesheet" href="style.css">-->
+      <meta name="description" content="Enkryptiaa is the biggest technical festival of central india.">
+  <meta name="keywords" content="Enkryptiaa, Gallery, memories, photos, archive,government polytechnic nagpur,gpn,techfest,enkryptiaa 2018">
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      
+       <!-- <link rel="stylesheet" type="text/css" href="preloader.css" >-->
+       <meta name="viewport" content="width=device-width, initial-scale=1"> 
+       <link rel="icon" href="logo.PNG">
+    <link rel="stylesheet" href="css/animate.css" title="animate">
+	<script src="jquery/jquery.js"></script>
+	<script src="jquery/main.js"></script>
+	<script src="jquery/modernizr.js"></script>
+   
+       <title>EnKryptiaa 2018 - A Techfest organised by Government Polytechnic Nagpur (GPN) </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <style>
+            body {
+                background-color: #fff;
+                margin: 0px;
+                overflow: hidden;
+                font-family:arial;
+                color:#fff;
+            }
+            h1{
+                margin:0;
+            }
+
+            a {
+                color:#0078ff;
+            }
+            #canvas{
+                width:100%;
+                height:700px;
+                overflow: hidden;
+                position:absolute;
+                top:0;
+                left:0;
+                background-color: #1a1724;               
+            }
+            .canvas-wrap{
+                position:relative;
+                
+            }
+            div.canvas-content{
+                position:relative;
+                z-index:2000;
+                color:#fff;
+                text-align:center;
+                padding-top:30px;
+            }
+            /*   <!-- added by srushti-->     */
+                    #openbtn1:hover{
+                        text-decoration: none;
+                        color: coral;
+                    }
+                    #openbtn1:visited{
+                        text-decoration: none;
+                         color: aliceblue;
+                    }
+                    #openbtn1:link{
+                        text-decoration: none;
+                         color: aliceblue;
+                    }
+                    .openbtn {
+
+                        top: 1;
+                        right: 0;
+
+                        font-size: 34px;
+                    }
+            
+        </style>
+    </head>
+    <body>
+        <style>
+         /*social _ bar*/
+        .social_bar{
+	margin:10px;
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	top: auto;
+	left: auto;
+	overflow:hidden;
+	z-index: 20;
+}
+
+@media (max-width: 960px) {
+  #to-nav-dot-1{
+    margin-left: 10px;
+  }
+}
+
+.social_list {
+    /*float:right;*/
+    list-style-type: none;
+	padding: 0px;
+	margin: 0px;
+    /*margin-top:40%;*/
+}
+.social_list .social-icon a {
+    display: inline-block;
+    //padding-bottom: 20%;
+    //padding-right:20%;
+	margin-top:8px;
+
+}
+.icons {
+	width: 40px;
+	height: 40px;
+    border-radius: 50%;
+    -moz-transition: -moz-transform .5s ease-in-out;
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+    transition:         transform height .5s ease-in-out;
+}
+.icons:hover {
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+		height: calc(width * 2);
+    /*opacity: 0.5;*/
+}
+/* Navigation Bar */
+
+@media (max-width:960px) {
+	.social-icon{
+		display: inline-block;
+		margin-left: 8px;
+	}
+
+	.icons{
+		height: 40px;
+		width: 40px;
+	}
+}
+         #sty1
+         {
+            
+             margin-top:0%;
+            /* text-shadow: 2px 2px 2px ;*/
+             color: white;
+             font-size: 32px;
+         }
+          #sty2
+         {
+             margin-top: 0%;
+            margin-left: 0;
+            /* text-shadow: 2px 2px 2px ;*/
+             color:white;
+             font-size: 20px;
+         }
+         #sty3
+         {
+           /*  font-style: oblique;*/
+             font-family: "Signika", sans-serif;
+             margin-top: 3%;
+               margin-left: 0px;
+          /*   text-shadow: 2px 2px 2px ;*/
+             color: white;
+             font-size: 30px;
+         }
+            .chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000  ;
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #3498db;
+
+    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+
+    z-index: 1001;
+}
+
+    #loader:before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        right: 5px;
+        bottom: 5px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #e74c3c;
+
+        -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+        animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    }
+
+    #loader:after {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        border-radius: 50%;
+        border: 3px solid transparent;
+        border-top-color: #f9c922;
+
+        -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+          animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+    }
+
+    @-webkit-keyframes spin {
+        0%   {
+            -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(0deg);  /* IE 9 */
+            transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+        100% {
+            -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(360deg);  /* IE 9 */
+            transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+    }
+    @keyframes spin {
+        0%   {
+            -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(0deg);  /* IE 9 */
+            transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+        100% {
+            -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: rotate(360deg);  /* IE 9 */
+            transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+        }
+    }
+
+    #loader-wrapper .loader-section {
+        position: fixed;
+        top: 0;
+        width: 51%;
+        height: 100%;
+        background: #222222;
+        z-index: 1000;
+        -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translateX(0);  /* IE 9 */
+        transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
+    }
+
+    #loader-wrapper .loader-section.section-left {
+        left: 0;
+    }
+
+    #loader-wrapper .loader-section.section-right {
+        right: 0;
+    }
+
+    /* Loaded */
+    .loaded #loader-wrapper .loader-section.section-left {
+        -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateX(-100%);  /* IE 9 */
+                transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+        -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+                transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+
+    .loaded #loader-wrapper .loader-section.section-right {
+        -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateX(100%);  /* IE 9 */
+                transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+
+-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+        transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+
+    .loaded #loader {
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-out;
+                transition: all 0.3s ease-out;
+    }
+    .loaded #loader-wrapper {
+        visibility: hidden;
+
+        -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+            -ms-transform: translateY(-100%);  /* IE 9 */
+                transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+        -webkit-transition: all 0.3s 1s ease-out;
+                transition: all 0.3s 1s ease-out;
+    }
+
+    /* JavaScript Turned Off */
+    .no-js #loader-wrapper {
+        display: none;
+    }
+    .no-js h1 {
+        color: #222222;
+    }
+
+    #content {
+        margin: 0 auto;
+        padding-bottom: 50px;
+        width: 80%;
+        max-width: 978px;
+    }
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: 
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+}
+        
+                       
+    </style>
+    
+         
+        <section class="canvas-wrap">
+            <div class="canvas-content">
+                <div id="container" >
+        
+        
+     
+  
+
+    <!-- modified by harshraj-->
+ <div style="margin-top: -02em" align = "right">
+    <!-- modified by harshraj-->
+ <header style="background: rgba(4, 22, 37, 0.75); opacity: 0.7;color: #c0c5c9;">
+     <span   style="float: left;font-size: 30px;margin-left: -7.3em"><a href="index.html"><img src="logo1.png" height="7%" style= "display: inline;margin-left: 0%"width="12%"></a></span>
+				<span style="font-size:35px;cursor:pointer;" style="float: right"><a  id="openbtn1" class="openbtn" data-type="page-transition" href = "menu.html">&#9776;</a></span></header>
+	</div >	
+		
+
+     
+                  <center> <h2 id = "sty1" style="margin-top: 17px;font-family:cursive" >
+  <!--  <img src = "img/clg_logo1.jpg" height="4%" width="4%" style="position: relative;border-radius: 50%;">-->&nbsp;Government Polytechnic Nagpur<br></h2>
+<p id = "sty2" style="font-family:cursive">presents <br></p><p id="sty3" style="font-family:cursive">ENKRYPTIAA 2k18</p></center>
+                    
+                  <!--   <h1 data-wow-delay="0.5s" data-wow-duration="3s" class="hs-line-1 wow fadeIn" style="font-family:Calibri;margin-bottom:20px;">Megalith 2018</h1>
+										<div data-wow-delay="0.5s" data-wow-duration="3s" class="hs-line-2 wow fadeInDown">Nagpur's Largest Polytechnic Fest <br>19<sup>th</sup> - 20<sup>th</sup> January 2018</div>-->
+                    
+<!--cube code starts here-->
+     <style>
+         
+        #mybag{   color: #fff;
+  background: linear-gradient(-45deg, #f50808, rgba(253, 65, 65, 0.8), #fb5e00, #080df5);
+  background-size: 4000% 4000%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%
+  }
+  50% {
+    background-position: 100% 50%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+}    
+                    
+                    </style>
+
+    <div align="center" style="direction: ltr;">
+
+      <!-- added by pratiksha 21/12/17 8 pm-->
+        
+        <div class="wrap" id = "wrap">
+             <div class="cube">      
+                <div class="front">
+                   <img src="img/clg_logo2.jpg" height="120" width="120" align="center" style="margin-top: 10%;">
+                 
+                </div>
+         
+            <div class="back">
+                <img src="Events/code.jpg" style = "opacity: 1.5"height="120" width="120">
+                                </div>
+               <div class="top" height="120" width="120" style="font-size: 25px;font-style: italic;font: 'calibri';text-align: center;">
+                   <a href = "eventspg.html">
+                   <div id="mybag" style="padding-top: 38%;">
+                   <!-- <img src="images/date.PNG" height="120" width="120"style="margin-top: 10%;">-->
+                   Events
+                       
+                  </div> </a>
+                </div>
+                <div class="bottom" height="120" width="120" style="font-size: 25px;font-style: italic;font: 'calibri';text-align: center;">
+                    <div id="mybag" style="padding-top: 13%;color: white;">
+                   <!-- <img src="images/date.PNG" height="120" width="120"style="margin-top: 10%;">--><a href = "camp.html" id = "openbtn1">
+                    Campus<br>Ambassador <br> Program</a>
+                    
+                  </div>
+                </div>
+                <div class="left" height="120" width="120" style="font-size: 25px;font-style: italic;font: 'calibri';text-align: center;">
+                  
+                    <div id="mybag" style="padding-top: 13%;">
+                   <!-- <img src="images/date.PNG" height="120" width="120"style="margin-top: 10%;">-->
+                    19<sup>th</sup> January<br>to <br> 20<sup>th</sup>January
+                    
+                  </div>
+                    
+                </div>
+                <div class="right" height="120" width="120" style="font-size: 25px;font-style: italic;font: 'calibri';text-align: center;"><div id="mybag" style="padding-top: 13%;">
+                   <!-- <img src="images/date.PNG" height="120" width="120"style="margin-top: 10%;">-->
+                   1 + 1 = 10 <br>Think Binary <br> Think Different..
+                    
+                  </div>
+            </div>
+         
+        </div>
+
+       <div style="text-align:center;margin-top: 80px;color: white;font-family: cursive;">
+            <h3 >19<sup>th</sup> January to 20<sup>th</sup> January</h3>
+            
+        </div>
+         
+
+        
+    </div>
+    
+    <!-- Social sidebar -->
+    <div class="social_bar" style="z-index: 999999999;">
+			<ul class="social_list">
+            <li class="social-icon"><a href="" target="_blank"><img class="icons" src="img/facebook1.png" height="40" width="40"/></a></li>
+            
+            <li class="social-icon"><a href="" target="_blank"><img class="icons" src="img/youtube1.png" height="40" width="40" /></a></li>
+            <li class="social-icon"><a href="" target="_blank"><img class="icons" src="img/instagram1.png" height="40" width="40" /></a>
+
+      </ul>
+		</div>
+ 
+
+      <!--  </div>--> 
+        
+    </div>
+         <!-- 
+        <div class="cd-cover-layer"></div>
+<div class="cd-loading-bar"></div>-->
+        </div>
+  
+            </div>
+            <div id="canvas" class="gradient"></div>
+            
+        </section>
+        
+        <!-- Main library -->
+        <script src="js/three.min.js"></script>
+      
+        <!-- Helpers -->
+        <script src="js/projector.js"></script>
+        <script src="js/canvas-renderer.js"></script>
+
+        <!-- Visualitzation adjustments -->
+        <script src="js/3d-lines-animation.js"></script>
+
+        <!-- Animated background color -->
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+        <script src="js/color.js"></script>
+        <script>
+                 
+        $(document).ready(function() {
+
+	setTimeout(function(){
+		$('#loaded').addClass('loaded');
+		$('#body').show();
+		// $('h1').css('color','#222222');
+	}, 0);
+
+	// $('#loader-wrapper').css({visibility: 'hidden'})
+
+});
+</script>
+
+         <div id="loaded" style="z-index: 999999999;">
+      <div id="loader-wrapper">
+  			<div id="loader"></div>
+  			<div class="loader-section section-left"></div>
+  			<div class="loader-section section-right"></div>
+  	  </div>
+    </div>
+    </body>
+</html>
